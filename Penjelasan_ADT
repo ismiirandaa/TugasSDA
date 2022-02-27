@@ -1,0 +1,95 @@
+DEFENISI ADT
+      ADT adalah koleksi data dan operasi yang dapat digunakan untuk memanipulasi data, tipe data tertentu yang didefinisikan oleh pemrogram untuk kemudahan pemrograman serta untuk mengakomodasi tipe-tipe data yang tidak secara spesifik diakomodasi oleh bahasa pemrograman yang digunakan. Untuk pembuatan ADT digunakan keyword typedef. Dalam C++, ADT dapat dibuat dalam sebuah Class. Class dalam C++ merupakan pengembangan dari struct dalam bahasa pemrograman C. Class memiliki data dan fungsi. Data dan fungsi yang dideklarasi private tidak dapat diakses secara langsung oleh client, sementara data dan fungsi yang dideklarasi public akan bersifat publik dan dapat diakses oleh client secara langsung.
+1.	ADT dapat memisah struktur penyimpanan (lokasi memori) dari perilaku.
+2.	ADT dapat menyembunyikan informasi atau pengkapsulan, yaitu :
+        – perubahan implementasi ADT tidak mengubah teks program lain bila antar muka tidak  berubah.
+        – pemakaian dan pembuatan ADT dapat dilakukan terpisah, hanya perlu kesepakatan antarmuka pemakaian ADT
+3.	ADT dapat membuat modul-modul yang menyerupai dengan konsep-konsep yang ditemukan pada domain persoalan
+Penerapan ADT yaitu:
+1) Tipe jadi (built-in): boolean, integer, real, array, dll
+     ADT Built-in:
+     a. Boolean
+          Nilai: true dan false
+          Operasi: and, or, not, xor, dll
+     b. Integer
+          Nilai: Semua bilangan
+          Operasi: tambah, kurang, kali, bagi, dll
+2) Tipe buatan (user-defined): stack, queue, tree, dll
+      ADT buatan (user-defined) :
+      a. Stack (tumpukan)
+          Nilai : elemen dalam stack
+          Operasi: create, destroy, push, pop
+      b. Queue (antrian)
+           Nilai: elemen dalam Queue
+           Operasi: create, destroy, enqueue, dequeue, dll
+      c. Tree (pohon)
+           Nilai: elemen dalam pohon
+           Operasi: insert, delete, find, traverse
+Contoh Program Kecil ADT :
+class Kalendar:
+
+    print("Aplikasi Validasi Tanggal")
+    print("Masukan Tanggal")
+    tanggal = int(input())
+    print("Masukan Bulan")
+    bulan = int(input())
+    print("Masukan Tahun")
+    tahun = int(input())
+    if(bulan == 1):
+        hari = 31        #namaBulan = "Januari"
+    elif(bulan == 2):
+        # Membuat Tahun Kabisat        
+        if((tahun % 4 == 0 and tahun % 100!=0) or tahun % 400 == 0):
+            hari = 29        
+        else:
+            hari = 28        
+            namaBulan = "Februari"
+    elif(bulan == 3):
+        hari = 31        
+        namaBulan = "Maret"
+    elif (bulan == 4):
+        hari = 30        
+        namaBulan = "Mei"
+    elif (bulan == 5):
+        hari = 31        
+        namaBulan = "April"
+    elif (bulan == 6):
+        hari = 30        
+        namaBulan = "Juni"
+    elif (bulan == 7):
+        hari = 31        
+        namaBulan = "Juli"
+    elif (bulan == 8):
+        hari = 30        
+        namaBulan = "Agustus"
+    elif (bulan == 9):
+        hari = 31        
+        namaBulan = "September"
+    elif (bulan == 10):
+        hari = 30        
+        namaBulan = "Oktober"
+    elif (bulan == 11):
+        hari = 31        
+        namaBulan = "November"
+    elif (bulan == 12):
+        hari = 30        
+        namaBulan = "Desember"
+    else:
+        hari = -1        
+        namaBulan = bulan
+    bTanggal = tanggal >=1 and tanggal <= hari
+    bBulan = bulan >=1 and bulan <=12    
+    bValid = bTanggal and bBulan
+    if(bValid):
+        hasil = " adalah tanggal yang valid."   
+    else:
+        hasil = " adalah tanggal yang tidak valid."
+    print("%d %s %d %s"%(tanggal,namaBulan,tahun,hasil))
+    
+Penjelasan Program Kecil menggunakan ADT
+Program tersebut merupakan contoh sederhana dalam penggunaan ADT(Abtrak Data Type). Program ini diawali dengan typdef yang merupakan ciri khas dari ADT tersebut. Program ini hanya meminta user menvalidasi tanggal. 
+Masukan Tanggal 2
+Masukan Bulan 2
+Masukan Tahun 2022
+2 Februari 2022  adalah tanggal yang valid.
+
