@@ -26,8 +26,8 @@ Penerapan ADT yaitu:
            Nilai: elemen dalam pohon
            Operasi: insert, delete, find, traverse
 Contoh Program Kecil ADT :
-class Kalendar:
 
+class Kalendar:
     print("Aplikasi Validasi Tanggal")
     print("Masukan Tanggal")
     tanggal = int(input())
